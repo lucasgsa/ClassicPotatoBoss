@@ -1,0 +1,36 @@
+------Configs Iniciais--------
+creditos_inicial:0
+plano_inicial:3
+spawn_inimigox:300
+spawn_inimigoy:120
+duracao_escudo:120
+
+------Tela Configs------------
+nome_display:~Potato Boss~
+velocidade_fps:60
+
+------Custo UPS--------------
+custo_1:1
+custo_2:1
+custo_3:1
+custo_4:1
+custo_5:5
+
+------Outras Configs----------
+modo_teste:false
+volume_musica:0.1
+
+------Locais Imagens----------
+local_icon:Sprites/icon.ico
+local_escudo:Sprites/escudo.png
+local_vidas:Sprites/vidas.png
+local_vidaspb:Sprites/vidas_pb.png
+local_ground:backgrouds/ground.png
+local_potatoSprite1:Sprites/potatoSprite1.png
+local_potatoSprite2:Sprites/potatoSprite2.png
+local_musica:sounds/musica.mp3
+local_dollar:Sprites/dollar.png
+local_b1:backgrouds/b1.jpg
+local_b2:backgrouds/b2.jpg
+local_b3:backgrouds/b3.jpg
+
