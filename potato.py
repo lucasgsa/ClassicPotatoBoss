@@ -114,6 +114,20 @@ frames_dur_escudo = 0
 liberado = True
 atualplano = int(novo["plano_inicial"])
 qualultimo = 0
+
+def defineLimites():
+	o = randrange(0,randomInimigo)
+	if not o > 10:
+		direcao_inimigo = direcao_inimigo * -1
+	if pos_inimigo[0] < 10:
+		direcao_inimigo = 1
+	if pos_inimigo[0] > 1210:
+		direcao_inimigo = -1
+	if pos_inimigo[1] < 50:
+		direcao_inimigoy = 1
+	if pos_inimigo[1] > 200:
+		direcao_inimigoy = -1
+
 plano = pygame.image.load(novo["local_b1"]).convert()
 while True:
 	if not perdeu:
@@ -324,23 +338,12 @@ while True:
 				screen.blit(bala_desenho, i)
 				
 			#limites inimigo
-			o = randrange(0,randomInimigo)
-			if not o > 10:
-				direcao_inimigo = direcao_inimigo * -1
-			if pos_inimigo[0] < 10:
-				direcao_inimigo = 1
-			if pos_inimigo[0] > 1210:
-				direcao_inimigo = -1
-			if pos_inimigo[1] < 50:
-				direcao_inimigoy = 1
-			if pos_inimigo[1] > 200:
-				direcao_inimigoy = -1
-			
+			defineLimites()
 			
 			
 			#Inimigo mexer
 			pos_inimigo = ((pos_inimigo[0] + velocidade_inimigo*direcao_inimigo, pos_inimigo[1]))
-			pos_inimigo = ((pos_inimigo[0], pos_inimigo[1] + velocidade_inimigoy*direcao_inimigoy))
+			pos_inimigo = ((pos_inimigo[0], pos_inimigo[1] + velocidade_inimigoy*direcao_inimigoy*2))
 			screen.blit(inimigo_sprite, pos_inimigo)
 			
 			#Atirar Balas Inimigo
